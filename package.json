@@ -1,0 +1,35 @@
+{
+  "name": "webkriti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nafees87n/webkriti.git"
+  },
+  "author": "Nafees",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nafees87n/webkriti/issues"
+  },
+  "homepage": "https://github.com/nafees87n/webkriti#readme",
+  "dependencies": {
+    "argon2": "^0.26.1",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mysql": "^2.18.1",
+    "node": "^13.10.1",
+    "nodemailer": "^6.4.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <title><%=user%> New Schedule</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div id="head">
+                <img src="../cric3removed2.png" alt="logo" class="logo" height="10px"/>
+            <p></p>
+            <div id="oldnav">
+                <nav>
+                    <ul>
+                        <li><a href="/agent/dashboard">DASHBOARD</a></li>
+                        <!-- <li><a href="agent/fixtures">FIXTURES</a></li> -->
+                        <li><a href="/agent/schedules">MY SCHEDULES</a></li>
+                        <!-- <li><a href="">FAQ</a></li> -->
+                        <li><a href="/agent/logout">LOGOUT</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="newnav">
+                <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()"> -->
+                    <div class="hamburger">
+                        <div id="line1"></div>
+                        <div id="line2"></div>
+                        <div id="line3"></div>
+                    </div>
+                <!-- </a> -->
+            </div>
+            </div>
+            
+        </header>
+        <div id="main">
+            <div class="topnavtoggle topnav">
+                <nav>
+                    <p><a class="ham" href="/agent/dashboard">DASHBOARD</a></p><br>
+                    <!-- <p><a class="ham" href="/agent/fixtures">FIXTURES</a></p><br> -->
+                    <p><a class="ham" href="/agent/schedules">MY SCHEDULES</a></p><br>
+                    <!-- <p><a class="ham" href="">FAQS</a></p><br> -->
+                    <p><a class="ham" href="/agent/logout">LOGOUT</a></p><br>
+                </nav>
+
+                <!-- <li><a href="">PROFILE</a></li> -->
+            </div>
+        </div>
+        <!-- <div id="main"> -->
+            <div id="signin" class="box">
+                <form action="/agent/schedules/new" method="POST">
+                    <h1 style="text-align: center">NEW SCHEDULE</h1>
+
+                    <label>Team 1:
+                        <input type="text" name="team1" placeholder="Enter Team 1" required>
+                    </label><br>
+
+                    <label>Team 2:
+                        <input type="text" name="team2" placeholder="Enter Team 2" required>
+                    </label><br>
+
+                    <label>Confirm Password:
+                        <input type="Password" minlength="8" name="confirm" placeholder="Enter Password" required>
+                    </label>
+                    
+                    <p><%=msg %></p>
+                    <br>
+
+
+                    <label>Date:</label>
+                    <input type="date" name="dom" required><br>
+
+                    <div class="buttons">
+                        <button type="submit" class="subbut">Schedule</button>
+                        <!-- <p class="up_in">Sign In</p>
+                        <p class="apage"><a href="/agent" class="apage"><span class="apage">Agent Login</span></a></p> -->
+                    </div>
+                </form>
+            </div>
+        <!-- </div> -->
+    </div>
+    <script>
+        
+        var x = document.querySelector(".topnavtoggle");
+                        var flag = false;
+                        document.querySelector("#newnav").addEventListener("click", function () {
+                            if (!flag) {
+                                x.classList.remove("topnavtoggle");
+                                x.classList.add("topnavnaf");
+                                flag = true;
+                            } else {
+                                x.classList.add("topnavtoggle");
+                                x.classList.remove("topnavnaf");
+                                flag = false;
+                            }
+
+                        });
+    </script>
+
+</body>
+
+</html>
